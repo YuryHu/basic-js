@@ -250,7 +250,7 @@ describe('What season', () => {
             };
 
             Object.setPrototypeOf(deeperFakeDate, Object.getPrototypeOf(new Date()));
-
+console.log(Object.getOwnPropertyDescriptors(deeperFakeDate))
             const res = checkForThrowingErrors.call(this, [
                 () => getSeason(deeperFakeDate)
             ], 'Invalid date!');
